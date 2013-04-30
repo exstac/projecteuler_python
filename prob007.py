@@ -1,6 +1,6 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
-from primes import gen_sieve
+from helpers.primes import gen_sieve
 
 gen = gen_sieve()
 c = 1

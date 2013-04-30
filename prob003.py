@@ -1,13 +1,10 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
-import math
-import primes
+import helpers.primes as primes
 
 big = 600851475143
 for x in primes.gen_sieve():
-    if big % x == 0:
-        big /= x
-        if big == 1: break
+    big = big / x if big % x == 0 else big
+    if big == 1:
+        break
 print x
-
-

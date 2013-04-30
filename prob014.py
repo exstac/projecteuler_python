@@ -1,6 +1,6 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
-mmap = {1:1}
+mmap = {1: 1}
 ans, max = 0, 0
 for i in range(1, 1000000):
     j, t = i, 1
@@ -9,7 +9,7 @@ for i in range(1, 1000000):
             if t > max:
                 ans, max = i, t
             mmap[i] = t
-            break            
+            break
         elif j in mmap:
             mmap[i] = t + mmap[j] - 1
             if mmap[i] > max:
@@ -18,4 +18,3 @@ for i in range(1, 1000000):
         j = 3 * j + 1 if j & 1 else j / 2
         t += 1
 print ans
-

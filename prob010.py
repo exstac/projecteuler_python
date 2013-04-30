@@ -1,9 +1,6 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
-from primes import gen_sieve
+from helpers.primes import gen_sieve
+from itertools import takewhile
 
-sum = 0
-for p in gen_sieve():
-    if p > 2000000: break;
-    sum+=p
-print sum
+print sum([p for p in takewhile(lambda x: x < 2000000, gen_sieve())])

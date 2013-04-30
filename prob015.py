@@ -1,10 +1,9 @@
-#!/usr/bin/python
+#!/usr/bin/env python
+
+from operator import mul
+
 
 def fac(n):
-    ret = 1
-    while n > 0:
-        ret *= n
-        n -= 1
-    return ret
+    return reduce(mul, range(n, 1, -1))
 
-print fac(40)/fac(20)**2
+print fac(40) / fac(20)**2

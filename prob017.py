@@ -1,4 +1,5 @@
-#!/usr/bin/python
+#!/usr/bin/env python
+
 
 def num_to_str(n):
     ret = ''
@@ -8,7 +9,8 @@ def num_to_str(n):
     if n >= 100:
         x = n % 1000 / 100
         ret += ones[x - 1] + 'hundred'
-        if n % 100 > 0: ret += 'and'
+        if n % 100 > 0:
+            ret += 'and'
     if n % 100 / 10 >= 2:
         x = n % 100 / 10
         ret += tens[x - 2]
