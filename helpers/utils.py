@@ -20,4 +20,4 @@ def tau(n):
 
 
 def sig(n):
-    return sum(i + n/i for i in range(1, int(sqrt(n)) + 1) if n % i == 0) - n
+    return sum(i+n/i if n/i != i else i for i in range(1, int(sqrt(n)+1)) if n % i == 0)-n
