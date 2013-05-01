@@ -1,4 +1,5 @@
 
+
 def gen_sieve():
     D = {}
     q = 2
@@ -8,6 +9,6 @@ def gen_sieve():
             D[q*q] = [q]
         else:
             for p in D[q]:
-                D.setdefault(p+q,[]).append(p)
+                D.setdefault(p+q, []).append(p)
             del D[q]
-        q+=1
+        q += 1
