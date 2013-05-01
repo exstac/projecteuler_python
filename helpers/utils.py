@@ -39,3 +39,12 @@ def lex_perm(a):
                     found2 = i
             a[found], a[found2] = a[found2], a[found]
             a = a[0:found+1] + sorted(a[found+1:])
+
+
+def fib():
+    yield 1
+    last = [0, 1]
+    while True:
+        f = sum(last)
+        yield f
+        last = last[1:] + [f]
